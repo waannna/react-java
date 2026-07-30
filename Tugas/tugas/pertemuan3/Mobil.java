@@ -1,6 +1,6 @@
 package tugas.pertemuan3;
 
-public class Mobil extends Kendaraan {
+public class Mobil extends Kendaraan implements Pajak {
 
     private String mobilTipe;
     private String bahanBakar;
@@ -56,5 +56,21 @@ public class Mobil extends Kendaraan {
     public void setJumlahPintu(int jumlahPintu) {
         this.jumlahPintu = jumlahPintu;
     }
+
+        @Override
+    public void infoPerawatan() {
+        System.out.println("Perawatan Mobil: Ganti oli mesin tiap 10.000 KM.");
+    }
+
+    @Override
+    public double hitungPajak() {
+        return getHarga() * 0.02;
+    }
+
+    @Override
+    public void tampilkanPajak() {
+        System.out.println("Nominal Pajak Mobil : Rp " + hitungPajak());
+    }
+
 
 }

@@ -1,6 +1,6 @@
 package tugas.pertemuan3;
 
-public class Motor extends Kendaraan {
+public class Motor extends Kendaraan implements Pajak {
 
     private String motorTipe;
     private String bahanBakar;
@@ -55,6 +55,21 @@ public class Motor extends Kendaraan {
 
     public void setTransmisiMotor(String transmisiMotor) {
         this.transmisiMotor = transmisiMotor;
+    }
+
+    @Override
+    public void infoPerawatan() {
+        System.out.println("Perawatan Motor: Ganti oli mesin tiap 10.000 KM.");
+    }
+
+    @Override
+    public double hitungPajak() {
+        return getHarga() * 0.02;
+    }
+
+    @Override
+    public void tampilkanPajak() {
+        System.out.println("Nominal Pajak Motor : Rp " + hitungPajak());
     }
 
 }

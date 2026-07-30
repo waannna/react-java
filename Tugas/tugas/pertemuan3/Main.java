@@ -183,8 +183,9 @@ public class Main {
 
                 System.out.println("\nData ke-" + (i + 1));
 
-                daftar.get(i).tampilInfo();
+                daftar.get(i).tampilInfo(true);
 
+                daftar.get(i).infoPerawatan();
                 System.out.println(
                         "Kategori : "
                         + kategori.get(

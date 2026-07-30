@@ -1,13 +1,13 @@
 package tugas.pertemuan3;
 
+public abstract class Kendaraan {
 
-public class Kendaraan {
     private String codeKendaraan;
     private String merk;
     private String warna;
     private double harga;
 
-    public Kendaraan( String codeKendaraan, String merk, String warna, double harga) {
+    public Kendaraan(String codeKendaraan, String merk, String warna, double harga) {
         this.codeKendaraan = codeKendaraan;
         this.merk = merk;
         this.warna = warna;
@@ -46,6 +46,8 @@ public class Kendaraan {
         this.harga = harga;
     }
 
+    public abstract void infoPerawatan();
+
     public void tampilInfo() {
         System.out.println("Kode Kendaraan: " + codeKendaraan);
         System.out.println("Merk: " + merk);
@@ -53,5 +55,12 @@ public class Kendaraan {
         System.out.println("Harga: " + harga);
     }
 
+    public void tampilInfo(boolean sertakanPajak) {
+        tampilInfo(); 
+        if (sertakanPajak && this instanceof Pajak) {
+            ((Pajak) this).tampilkanPajak(); 
+        }
 
+
+    }
 }
