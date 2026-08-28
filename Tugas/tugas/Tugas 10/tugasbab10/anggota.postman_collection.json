@@ -1,0 +1,164 @@
+{
+  "info": {
+    "_postman_id": "473a6953-d1ba-49ad-95de-294bbbc77fd4",
+    "name": "anggota",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "49214771",
+    "_collection_link": "https://go.postman.co/collection/49214771-473a6953-d1ba-49ad-95de-294bbbc77fd4?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "tambah anggota",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"nama\": \"Ade Dermawan\",\r\n    \"nim\": \"02042411001\",\r\n    \"alamat\": \"Bandung Barat\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/anggota",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "anggota"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get semua anggota",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/anggota",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "anggota"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get anggota berdasarkan id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/anggota/3",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "anggota",
+            "3"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update anggota",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"nama\": \"Ade\",\r\n    \"nim\": \"02042411001\",\r\n    \"alamat\": \"Bandung Barat\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/anggota/3",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "anggota",
+            "3"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "delete anggota",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"nama\": \"Ade\",\r\n    \"nim\": \"02042411001\",\r\n    \"alamat\": \"Bandung Barat\"\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/anggota/3",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "anggota",
+            "3"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get tidak ditemukan",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"nama\": \"Ade\",\r\n    \"nim\": \"02042411001\",\r\n    \"alamat\": \"Bandung Barat\"\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/anggota/99",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "anggota",
+            "99"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
